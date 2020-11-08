@@ -1,0 +1,38 @@
+"""
+type Person {
+  id: Int!
+  name: String!
+  age: Int!
+  gender: String!
+}
+
+type coding {
+  id: Int!
+  name: String!
+  score: Int!
+}
+
+type Query {
+  people: [Person]!
+  person(id: Int!): Person
+  codings: [coding]
+  coding(id: Int!): coding
+}
+
+type Mutation {
+  addCoding(name: String!, score: Int!): coding!
+  deleteCode(id: Int!): Boolean!
+}
+"""
+type Movie {
+  id: Int!
+  title: String!
+  rating: Float!
+  summary: String!
+  language: String!
+  medium_cover_image: String!
+}
+
+type Query {
+  movies(limit: Int, rating: Float): [Movie]!
+}
